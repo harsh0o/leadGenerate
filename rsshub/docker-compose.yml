@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  rsshub:
+    image: diygod/rsshub:chromium-bundled
+    container_name: standalone_rsshub
+    ports:
+      - "1200:1200"
+    environment:
+      - CACHE_TYPE=redis
+      - REDIS_URL=redis://redis:6379/
+      - CACHE_EXPIRE=3600
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    restart: always
+
+  redis:
+    image: redis:alpine
+    container_name: standalone_rsshub_redis
+    volumes:
+      - rsshub-redis-data:/data
+    restart: always
+
+volumes:
+  rsshub-redis-data:

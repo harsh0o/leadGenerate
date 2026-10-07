@@ -1,0 +1,12 @@
+INFO:     Started server process [11768]
+INFO:     Waiting for application startup.
+2026-10-07 12:29:16.744 | INFO     | app.scheduler.jobs:setup_scheduler:57 - APScheduler started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-10-07 12:59:16.734 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check
+2026-10-07 13:29:16.745 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check
+2026-10-07 13:59:16.744 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check
+2026-10-07 14:29:16.743 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check
+2026-10-07 14:29:16.753 | INFO     | app.scheduler.jobs:scan_all_active_profiles:75 - Running scan_all_active_profiles
+2026-10-07 14:59:16.739 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check
+2026-10-07 15:29:19.617 | INFO     | app.scheduler.jobs:platform_health_check:98 - Running platform_health_check

@@ -1,0 +1,104 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: leadhunter_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Single mount is enough; DB path resolves inside container.
+      # Use a named volume for sqlite to avoid Windows bind-mount directory-creation race.
+      - backend-data:/app/data
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    environment:
+      - DATABASE_URL=sqlite:///./data/leadhunter.db
+      - RSSHUB_BASE_URL=http://rsshub:1200
+    depends_on:
+      rsshub:
+        condition: service_started
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    restart: unless-stopped
+    networks:
+      - leadhunter_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # NEXT_PUBLIC_* is baked at build time – pass explicitly
+        - NEXT_PUBLIC_API_URL=http://localhost:8000
+    container_name: leadhunter_frontend
+    ports:
+      - "3000:3000"
+    # NOTE: dev override only. For prod (npm start) do NOT bind-mount source over /app.
+    # Use: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+    env_file:
+      - ./frontend/.env.local
+    environment:
+      - NODE_ENV=production
+      - BACKEND_URL=http://backend:8000
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - leadhunter_network
+
+  rsshub:
+    image: diygod/rsshub:chromium-bundled
+    container_name: leadhunter_rsshub
+    ports:
+      - "1200:1200"
+    environment:
+      - CACHE_TYPE=redis
+      - REDIS_URL=redis://redis:6379/
+      - CACHE_EXPIRE=3600
+    env_file:
+      - ./rsshub/.env
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:1200/healthz').then(r=>{if(!r.ok)process.exit(1)})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - leadhunter_network
+
+  redis:
+    image: redis:alpine
+    container_name: leadhunter_redis
+    command: redis-server --appendonly yes
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - leadhunter_network
+
+networks:
+  leadhunter_network:
+    driver: bridge
+
+volumes:
+  redis-data:
+  backend-data:

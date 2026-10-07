@@ -1,0 +1,16 @@
+# LeadHunter AI Platform Configurations
+
+reddit:
+  user_agent: "script:LeadHunterAI:v1.0 (by /u/leadhunter_bot)"
+
+hackernews:
+  # HackerNews API doesn't require specific config usually
+
+linkedin:
+  profile_dir: "./linkedin_chrome_profile" # Path to Chrome profile for Playwright
+
+twitter:
+  rsshub_url: "http://localhost:1200/twitter" # Ensure RSSHub is running
+
+threads:
+  rsshub_url: "http://localhost:1200/threads"

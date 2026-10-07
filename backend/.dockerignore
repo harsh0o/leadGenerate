@@ -1,0 +1,11 @@
+.env
+*.db
+*.sqlite
+*.sqlite-journal
+__pycache__/
+*.pyc
+.venv/
+venv/
+linkedin_chrome_profile/
+browser_data/
+*.log

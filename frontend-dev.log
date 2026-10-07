@@ -1,0 +1,134 @@
+
+> leadhunter-ai-frontend@1.0.0 dev
+> next dev
+
+  ▲ Next.js 14.2.10
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.8s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.4s (1289 modules)
+ GET / 200 in 4569ms
+ ✓ Compiled in 275ms (648 modules)
+ ✓ Compiled in 61ms (634 modules)
+ GET / 200 in 83ms
+ GET / 200 in 40ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 555ms (1298 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 292ms (1312 modules)
+ GET /dashboard 200 in 287ms
+ ✓ Compiled in 229ms (1312 modules)
+ GET / 200 in 96ms
+ GET /dashboard 200 in 43ms
+ GET /dashboard 200 in 39ms
+ ✓ Compiled /profiles/new in 465ms (1318 modules)
+ ✓ Compiled /profiles in 414ms (1352 modules)
+ ✓ Compiled in 143ms (681 modules)
+ ✓ Compiled /radar in 336ms (1356 modules)
+ ○ Compiling /leads ...
+ ✓ Compiled /leads in 869ms (1372 modules)
+ ✓ Compiled /profiles in 139ms (695 modules)
+ ✓ Compiled in 478ms (1368 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /profiles 200 in 266ms
+ ✓ Compiled in 281ms (1368 modules)
+ ✓ Compiled in 195ms (1368 modules)
+ ✓ Compiled in 193ms (1368 modules)
+ ✓ Compiled in 193ms (1368 modules)
+ ✓ Compiled in 145ms (687 modules)
+ ✓ Compiled in 355ms (701 modules)
+ ✓ Compiled in 140ms (701 modules)
+ ✓ Compiled in 131ms (701 modules)
+ ✓ Compiled in 147ms (701 modules)
+ ✓ Compiled in 127ms (701 modules)
+ ✓ Compiled in 132ms (701 modules)
+ ✓ Compiled in 141ms (701 modules)
+ ✓ Compiled in 125ms (701 modules)
+ ✓ Compiled in 385ms (1382 modules)
+ ✓ Compiled in 323ms (1382 modules)
+ ✓ Compiled in 225ms (1382 modules)
+ ✓ Compiled in 312ms (1382 modules)
+ ✓ Compiled in 238ms (1382 modules)
+ ✓ Compiled in 137ms (701 modules)
+ ✓ Compiled in 126ms (701 modules)
+ ✓ Compiled in 137ms (701 modules)
+ ✓ Compiled in 138ms (701 modules)
+ ✓ Compiled in 129ms (701 modules)
+ ✓ Compiled in 320ms (701 modules)
+ ✓ Compiled in 444ms (1382 modules)
+ ✓ Compiled in 278ms (1382 modules)
+ ✓ Compiled in 254ms (1382 modules)
+ ✓ Compiled in 220ms (1382 modules)
+ ✓ Compiled in 217ms (1382 modules)
+ ✓ Compiled in 230ms (1382 modules)
+ ✓ Compiled in 269ms (1382 modules)
+ ✓ Compiled in 225ms (1368 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /profiles 200 in 132ms
+ ✓ Compiled in 242ms (1382 modules)
+ ✓ Compiled in 254ms (1382 modules)
+ ✓ Compiled in 237ms (1382 modules)
+ ✓ Compiled in 258ms (1382 modules)
+ ✓ Compiled in 245ms (1382 modules)
+ ✓ Compiled in 248ms (1382 modules)
+ ✓ Compiled in 111ms (701 modules)
+ ✓ Compiled in 132ms (701 modules)
+ ✓ Compiled in 121ms (701 modules)
+ ✓ Compiled in 140ms (701 modules)
+ ✓ Compiled in 242ms (1368 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /profiles 200 in 123ms
+ ✓ Compiled in 137ms (701 modules)
+ GET /profiles 200 in 44ms
+ ✓ Compiled /leads in 453ms (695 modules)
+ ✓ Compiled in 533ms (1382 modules)
+ ✓ Compiled in 161ms (701 modules)
+ ✓ Compiled in 122ms (701 modules)
+ ✓ Compiled in 211ms (687 modules)
+ ✓ Compiled in 181ms (1368 modules)
+ ✓ Compiled in 179ms (1368 modules)
+ ✓ Compiled in 213ms (1368 modules)
+ ✓ Compiled in 246ms (1368 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /profiles 200 in 124ms
+ ✓ Compiled in 487ms (1368 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET /profiles 200 in 116ms
+ ✓ Compiled in 299ms (1382 modules)
+ ✓ Compiled in 123ms (701 modules)
+ ✓ Compiled in 242ms (1382 modules)
+ ✓ Compiled in 281ms (1382 modules)
+ ✓ Compiled in 101ms (701 modules)
+ ✓ Compiled in 218ms (1382 modules)
+ ✓ Compiled in 306ms (1382 modules)
+ ✓ Compiled in 138ms (701 modules)
+ ✓ Compiled in 104ms (701 modules)
+ ✓ Compiled in 119ms (701 modules)
+ ✓ Compiled in 241ms (1382 modules)
+ ✓ Compiled in 214ms (1382 modules)
+ ✓ Compiled in 260ms (1382 modules)
+ ✓ Compiled in 236ms (1382 modules)
+ ✓ Compiled in 296ms (1382 modules)
+ ✓ Compiled in 250ms (1382 modules)
+ ✓ Compiled in 216ms (1382 modules)
+ ✓ Compiled in 113ms (687 modules)
+ ✓ Compiled in 108ms (687 modules)
+ ✓ Compiled in 90ms (687 modules)
+ ✓ Compiled in 111ms (701 modules)
+ ✓ Compiled in 141ms (701 modules)
+ ✓ Compiled in 195ms (1368 modules)
+ ✓ Compiled in 197ms (1368 modules)
+ ✓ Compiled in 177ms (1368 modules)
+ ✓ Compiled in 226ms (1368 modules)
+ ✓ Compiled in 194ms (1368 modules)
+ ✓ Compiled in 81ms (687 modules)
+ ✓ Compiled in 172ms (1368 modules)
+ ✓ Compiled in 178ms (1368 modules)
+ GET /profiles 200 in 134ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 832ms (1385 modules)
+ GET /profiles/1 404 in 95ms
+[?25h
